@@ -6,3 +6,17 @@
  - [OXMysql](https://github.com/overextended/oxmysql)
  - [MugShotBase64](https://github.com/BaziForYou/MugShotBase64)
 
+
+Add this line into qb-mulichatacter client/main.lua @ Line 118
+```lua
+exports['qb_headshot']:TakePlayerHeadshot()
+```
+
+Example
+```lua
+RegisterNetEvent('qb-multicharacter:client:closeNUI', function()
+    DeleteEntity(charPed)
+    SetNuiFocus(false, false)
+    exports['qb_headshot']:TakePlayerHeadshot()
+end)
+```
